@@ -35,10 +35,10 @@
         'views/dokter_view.xml',
         'views/apoteker_view.xml',
         'views/pelanggan_view.xml',
+        'report/report.xml',
+        'report/print_faktur_penjualan.xml',
         'wizard/import_obat_wizard_view.xml',
         'wizard/import_supplier_wizard_view.xml',
-        'report/report.xml',
-        # 'report/print_faktur_penjualan.xml'
         
         
         

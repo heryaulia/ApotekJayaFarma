@@ -38,8 +38,8 @@
         <field name="name">Print Faktur PDF</field>
         <field name="model">apotek.penjualan</field>
         <field name="report_type">qweb-pdf</field>
-        <field name="report_name">apotek.report_penjualan_pdf</field>
-        <field name="report_file">apotek.report_penjualan_pdf</field>
+        <field name="report_name">apotekjayafarma.report_penjualan_pdf</field>
+        <field name="report_file">apotekjayafarma.report_penjualan_pdf</field>
         <field name="binding_model_id" ref="model_apotek_penjualan"/>
         <field name="binding_type">report</field>
     </record>
