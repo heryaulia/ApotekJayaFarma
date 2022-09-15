@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- apotek.importsupplier form view -->
+    <record id="importsupplier_view_form" model="ir.ui.view">
+        <field name="name">Import Supplier</field>
+        <field name="model">apotek.importsupplier</field>
+        <field name="arch" type="xml">
+            <form string="Form Import Supplier"> 
+                <group> 
+                    <field name="namasupplier"/>
+                    <field name="no_hp"/>
+                    <field name="alamatsupplier"/>
+                    <field name="supplyobat_ids"/>
+                </group>
+                <footer>
+                    <button name="btn_import_supplier" type="object" string="Simpan" class="btn btn-primary"/>
+                    <button string="Cancel" special="cancel" class="btn btn-danger"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- apotek.importsupplier action window -->
+    <record id="importsupplier_action" model="ir.actions.act_window">
+        <field name="name">Tambah Supplier</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">apotek.importsupplier</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="importsupplier_view_form"/>
+        <field name="target">new</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="importsupplier_menu_act" name="Tambah Supplier" parent="import_menu_categ" action="importsupplier_action" sequence="20"/>
+
+</odoo>

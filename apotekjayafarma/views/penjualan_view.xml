@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+
+    <!-- apotek.penjualan tree view -->
+    <record id="apotek_penjualan_view_tree" model="ir.ui.view">
+        <field name="name">List Penjualan</field>
+        <field name="model">apotek.penjualan</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="pelanggan_id"/>
+                 <field name="apoteker_id"/>
+                <field name="tgl_penjualan"/>
+                <field name="total_bayar"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- apotek.penjualan form view -->
+    <record id="apotek_penjualan_view_form" model="ir.ui.view">
+        <field name="name">Form Penjualan</field>
+        <field name="model">apotek.penjualan</field>
+        <field name="arch" type="xml">
+            <form string="Form Penjualan">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="pelanggan_id" domain="[('is_pelanggan', '=', True)]" required="1" />
+                        <field name="apoteker_id" required="1"/>
+                        <field name="tgl_penjualan"/>
+                        <field name="total_bayar"/>
+                    </group>
+                    <group >
+                        <field name="detailpenjualan_ids" >
+                            <tree editable= 'bottom'>
+                                <field name="obat_id"/>
+                                <field name="harga_satuan" readonly="1" force_save="1"/>
+                                <field name="qty"/>
+                                <field name="subtotal" sum="Total"/>
+                            </tree>
+                        </field>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- apotek.penjualan action window -->
+    <record id="apotek_penjualan_action" model="ir.actions.act_window">
+        <field name="name">Penjualan</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">apotek.penjualan</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="penjualan_view_menu_act" 
+            name="Penjualan" 
+            parent="apotek_menu_root" 
+            action="apotek_penjualan_action" 
+            sequence="50"/>
+</odoo>

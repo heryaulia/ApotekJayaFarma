@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- apotek.obat tree view -->
+    <record id="apotek_barang_view_tree" model="ir.ui.view">
+        <field name="name">apotek.obat.view.tree</field>
+        <field name="model">apotek.obat</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="id_obat"/> 
+                <field name="name"/>
+                <field name="kategoriobat_id"/>
+                <field name="harga"/>
+                <field name="stok"/>
+                <field name="supplier_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- apotek.obat form view -->
+    <record id="apotek_obat_view_form" model="ir.ui.view">
+        <field name="name">apotek.obat.view.form</field>
+        <field name="model">apotek.obat</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="id_obat"/>  
+                    </group>
+                    <group name="detail" string="Detail Obat">
+                        <field name="name"/>
+                        <field name="kategoriobat_id"/>
+                        <field name="harga"/>
+                        <field name="stok"/>  
+                    </group>
+                    <group name="supplier" string="Supplier">
+                        <field name="supplier_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- apotek.obat action window -->
+    <record id="apotek_obat_action" model="ir.actions.act_window">
+        <field name="name">Katalog Obat</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">apotek.obat</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="apotek_obat_menu_act"
+              name="Obat"
+              parent="katalog_menu_categ"
+              action="apotek_obat_action"
+              sequence="10"/>
+
+</odoo>

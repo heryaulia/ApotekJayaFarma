@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- apotek.importobat form view -->
+    <record id="importobat_view_form" model="ir.ui.view">
+        <field name="name">Import Obat</field>
+        <field name="model">apotek.importobat</field>
+        <field name="arch" type="xml">
+            <form string="Form Import Obat"> 
+                <group> 
+                    <field name="obat_id"/>
+                    <field name="jumlah"/>
+                </group>
+                <footer>
+                    <button name="btn_import_obat" type="object" string="Simpan" class="btn btn-primary"/>
+                    <button string="Cancel" special="cancel" class="btn btn-danger"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- apotek.importobat action window -->
+    <record id="importobat_action" model="ir.actions.act_window">
+        <field name="name">Import Obat</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">apotek.importobat</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="importobat_view_form"/>
+        <field name="target">new</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="importobat_menu_act" name="Tambah Obat" parent="import_menu_categ" action="importobat_action" sequence="10"/>
+
+</odoo>

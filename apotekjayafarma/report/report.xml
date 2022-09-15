@@ -1,0 +1,48 @@
+<odoo>
+
+    <!-- Report Daftar Supplier XLSX-->
+    <record id="report_supplier_xlsx" model="ir.actions.report">
+        <field name="name">Daftar Supplier Excel</field>
+        <field name="model">apotek.supplier</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">apotek.report_supplier_xlsx</field>
+        <field name="report_file">apotek.report_supplier_xlsx</field>
+        <field name="binding_model_id" ref="model_apotek_supplier"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <!-- Report Daftar Obat XLSX-->
+    <record id="report_obat_xlsx" model="ir.actions.report">
+        <field name="name">Daftar Obat Excel</field>
+        <field name="model">apotek.obat</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">apotek.report_obat_xlsx</field>
+        <field name="report_file">apotek.report_obat_xlsx</field>
+        <field name="binding_model_id" ref="model_apotek_obat"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <!-- Report Penjualan XLSX-->
+    <!-- <record id="report_penjualan_xlsx" model="ir.actions.report">
+        <field name="name">Penjualan Excel</field>
+        <field name="model">apotek.penjualan</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">apotek.report_penjualan_xlsx</field>
+        <field name="report_file">apotek.report_penjualan_xlsx</field>
+        <field name="binding_model_id" ref="model_apotek_penjualan"/>
+        <field name="binding_type">report</field>
+    </record> -->
+
+    <!-- Report Penjualan PDF-->
+    <record id="report_penjualan_pdf" model="ir.actions.report">
+        <field name="name">Print Faktur PDF</field>
+        <field name="model">apotek.penjualan</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">apotek.report_penjualan_pdf</field>
+        <field name="report_file">apotek.report_penjualan_pdf</field>
+        <field name="binding_model_id" ref="model_apotek_penjualan"/>
+        <field name="binding_type">report</field>
+    </record>
+
+
+</odoo>

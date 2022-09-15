@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+  <!-- This Menu Item will appear in the Upper bar, that's why It needs NO parent or action -->
+  <menuitem id="apotek_menu_root" 
+            name="Apotek Jaya Farma" 
+            sequence="10"/>
+
+  <!-- This Menu Item Must have a parent -->
+  <menuitem id="katalog_menu_categ"
+            name="Katalog"
+            parent="apotek_menu_root"
+            sequence="20"/>
+
+  <menuitem id="karyawan_menu_categ"
+            name="Karyawan"
+            parent="apotek_menu_root"
+            sequence="30"/>
+
+  <menuitem id="pembelian_menu_categ"
+            name="Pembelian"
+            parent="apotek_menu_root"
+            sequence="40"/>
+
+   <menuitem id="import_menu_categ"
+            name="Import"
+            parent="apotek_menu_root"
+            sequence="60"/>
+
+</odoo>

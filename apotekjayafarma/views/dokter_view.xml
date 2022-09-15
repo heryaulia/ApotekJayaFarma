@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- apoteker.dokter inherit tree view -->
+    <record id="apotek_dokter_view_tree_inherit" model="ir.ui.view">
+        <field name="name">Daftar Dokter</field>
+        <field name="model">apotek.dokter</field>
+        <field name="mode">primary</field>
+        <field name="inherit_id" ref="apotek_person_view_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="before">
+                <field name="id_dokter"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- apoteker.dokter inherit form view -->
+    <record id="apotek_dokter_view_form_inherit" model="ir.ui.view">
+        <field name="name">Form Dokter</field>
+        <field name="model">apotek.dokter</field>
+        <field name="mode">primary</field>
+        <field name="inherit_id" ref="apotek_person_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="before">
+                <field name="id_dokter"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- aapoteker.dokter action window -->
+    <record id="apotek_dokter_action" model="ir.actions.act_window">
+        <field name="name">Daftar Dokter</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">apotek.dokter</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="apotek_dokter_menu_act" 
+              name="Dokter"
+              parent="karyawan_menu_categ" 
+              action="apotek_dokter_action" 
+              sequence="10"/>
+
+</odoo>

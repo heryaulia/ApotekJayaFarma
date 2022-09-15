@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<!-- apotek.supplier tree view -->
+<record id="apotek_supplier_view_tree" model="ir.ui.view">
+    <field name="name">Daftar Supplier</field>
+    <field name="model">apotek.supplier</field>
+    <field name="arch" type="xml">
+        <tree>
+            <field name="name"/>
+            <field name="alamat"/>
+            <field name="no_hp"/>
+            <field name="obat_id"/>            
+        </tree>
+    </field>
+</record>
+
+
+<!-- apotek.supplier form view -->
+<record id="apotek_supplier_view_form" model="ir.ui.view">
+    <field name="name">Form Supplier</field>
+    <field name="model">apotek.supplier</field>
+    <field name="arch" type="xml">
+        <form string="">
+            <sheet> 
+                <group>
+                    <field name="name"/>
+                    <field name="alamat"/>
+                    <field name="no_hp"/>
+                </group>
+                <group name="obat" string="Supply Obat">
+                    
+                    <field name="obat_id"/>                    
+                </group>
+            </sheet>
+        </form>
+    </field>
+</record>
+
+
+    <!-- apotek.supplier action window -->
+    <record id="apotek_supplier_action" model="ir.actions.act_window">
+        <field name="name">Daftar Supplier</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">apotek.supplier</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="apotek_supplier_menu_act" 
+                name="Supplier" 
+                parent="apotek_menu_root" 
+                action="apotek_supplier_action" 
+                sequence="40"/>
+
+</odoo>

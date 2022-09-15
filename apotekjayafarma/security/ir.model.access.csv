@@ -1,0 +1,11 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_apotek_obat,access.apotek.obat,model_apotek_obat,,1,1,1,1
+access_apotek_kategoriobat,access.apotek.kategoriobat,model_apotek_kategoriobat,,1,1,1,1
+access_apotek_supplier,access.apotek.supplier,model_apotek_supplier,,1,1,1,1
+access_apotek_penjualan,access.apotek.penjualan,model_apotek_penjualan,,1,1,1,1
+access_apotek_detailpenjualan,access.apotek.detailpenjualan,model_apotek_detailpenjualan,,1,1,1,1
+access_apotek_person,access.apotek.person,model_apotek_person,,1,1,1,1
+access_apotek_apoteker,access.apotek.apoteker,model_apotek_apoteker,,1,1,1,1
+access_apotek_dokter,access.apotek.dokter,model_apotek_dokter,,1,1,1,1
+access_apotek_importobat,access.apotek.importobat,model_apotek_importobat,,1,1,1,1
+access_apotek_importsupplier,access.apotek.importsupplier,model_apotek_importsupplier,,1,1,1,1
