@@ -11,7 +11,7 @@ class Supplier(models.TransientModel):
     
     
     
-    #function to create new suuplier form wizard import supplier
+    #function to create new suuplier from wizard import supplier
     def btn_import_supplier(self):
         vals = {
             'name': self.namasupplier,
