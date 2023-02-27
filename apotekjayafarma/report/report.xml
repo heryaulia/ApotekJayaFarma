@@ -34,7 +34,7 @@
     </record> -->
 
     <!-- Report Penjualan PDF-->
-    <record id="report_penjualan_pdf" model="ir.actions.report">
+    <record id="custom_report_penjualan_pdf" model="ir.actions.report">
         <field name="name">Print Faktur PDF</field>
         <field name="model">apotek.penjualan</field>
         <field name="report_type">qweb-pdf</field>
